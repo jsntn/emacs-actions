@@ -17,9 +17,12 @@ jobs:
     - name: emacs help
       run: |
        emacs --help
+    - name: emacs packages installation
+      run: |
+       emacs --batch -Q --load scripts/packages.el
     - name: emacs processing
       run: |
-       cd scripts && emacs --batch -Q --load packages.el -f org-publish-current-project --kill
+       emacs --batch -Q --load scripts/project.el -f org-publish-all --kill
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
