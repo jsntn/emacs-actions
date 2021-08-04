@@ -22,7 +22,7 @@ jobs:
        emacs --batch -Q --load scripts/packages.el
     - name: emacs processing
       run: |
-       emacs --batch -Q --load scripts/project.el -f org-publish-all --kill
+       emacs --batch -Q --load scripts/packages.el -f org-publish-all --kill
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
