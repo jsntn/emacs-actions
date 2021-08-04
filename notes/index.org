@@ -1,0 +1,3 @@
+#+TITLE: <hi@jsntn.com> Notes
+* 2021
+- [[file:coding-with-emacs.org][Coding with Emacs]]
