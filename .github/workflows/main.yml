@@ -13,4 +13,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: check version
       run: |
-       cd scripts && emacs --load packages.el && emacs --version
+       emacs --version && emacs --help && cd scripts && emacs --batch -Q --load packages.el
