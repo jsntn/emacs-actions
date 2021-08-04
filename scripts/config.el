@@ -34,11 +34,6 @@
 	 :section-numbers nil
 	 :author "Jason"
 	 :email "hi@jsntn.com"
-	 :auto-sitemap t
-	 :sitemap-filename "sitemap.org"
-	 :sitemap-title "Sitemap"
-	 :sitemap-sort-files anti-chronologically
-	 :sitemap-file-entry-format "%d %t"
 
 	 ;; the following removes extra headers from HTML output -- important!
 	 :html-link-home "/"
