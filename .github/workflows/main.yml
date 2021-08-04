@@ -1,7 +1,7 @@
 name: CI
 on:
   push:
-    branches: [ox-publish]
+    branches: [org-to-html]
 
 jobs:
   build:
@@ -19,9 +19,9 @@ jobs:
        emacs --help
     - name: emacs processing
       run: |
-       emacs --batch -Q --load scripts/config.el -f org-publish-all --kill
-    - name: deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-       github_token: ${{ secrets.GITHUB_TOKEN }}
-       publish_dir: ./html
+       emacs coding-with-emacs.org --batch -Q -f org-html-export-to-html --kill
+#    - name: deploy
+#      uses: peaceiris/actions-gh-pages@v3
+#      with:
+#       github_token: ${{ secrets.GITHUB_TOKEN }}
+#       publish_dir: ./html
